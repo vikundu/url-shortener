@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-if you are running the project for first time, run:
-1.`npm install`
-2. `cd server && npm install`
-3. `cd ..`
+if you are running the project for first time, run:<br>
+1.`npm install`<br>
+2. `cd server && npm install`<br>
+3. `cd ..`<br>
 
 ### `npm run dev`
 
