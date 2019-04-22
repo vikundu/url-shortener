@@ -1,0 +1,49 @@
+type Query {
+    feed(filter: String): Feed!
+    link(id: ID!): Link
+    analytic(ipUrl: String!): Analytic
+    analyticsIp(filter: String): [Analytic!]!
+}
+
+type Mutation {
+    post(url: String!, shortUrl: String!, description: String ): Link!
+    signup(email: String!, password: String!, name: String!): AuthPayload
+    login(email: String!, password: String!): AuthPayload
+    analytic(ipUrl: String!, clickCount: Int!, url: String!): Analytic
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  links: [Link!]!
+}
+
+type Link {
+    id: ID!
+    url: String!
+    shortUrl: String!
+    postedBy: String
+    analytics: [Analytic!]!
+}
+
+type Feed {
+  links: [Link!]!
+  count: Int!
+}
+
+type Subscription {
+  newLink: Link
+}
+
+type Analytic{
+    id:ID!
+    clickCount: Int!
+    ipUrl: String!
+    url: String!
+}

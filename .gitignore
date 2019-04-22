@@ -4,12 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
+/server/node_modules
 
 # testing
 /coverage
 
 # production
 /build
+
+#API keys
+/src/credentials
 
 # misc
 .DS_Store

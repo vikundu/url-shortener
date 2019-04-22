@@ -1,0 +1,6 @@
+endpoint: https://us1.prisma.sh/vikas-kundu-01c991/url-shortener/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

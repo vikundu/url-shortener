@@ -1,0 +1,23 @@
+type Link {
+    id: ID! @id
+    createdAt: DateTime! @createdAt
+    url: String!
+    shortUrl: String!
+    clickCount: Int!
+    analytics: [Analytic!]!
+}
+
+type User {
+    id: ID! @id
+    name: String!
+    email: String! @unique
+    password: String! 
+    links: [Link!]!
+}
+
+type Analytic {
+    id: ID! @id
+    clickCount: Int!
+    ipUrl: String! @unique
+    url: String!
+}
